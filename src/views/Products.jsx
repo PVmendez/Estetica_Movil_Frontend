@@ -52,11 +52,6 @@ const Products = () => {
                   <h3 className="text-fontBlack text-2xl lg:text-3xl font-medium">
                     {product.price}
                   </h3>
-                  <img
-                    src={plusIcon}
-                    alt=""
-                    className="cursor-pointer h-10 xs:h-12 w-10 xs:w-12"
-                  />
                 </div>
               </div>
             </div>

@@ -3,7 +3,6 @@ import { useState } from "react";
 import masage from "../assets/masage1.jpg";
 import mainLogo from "../assets/scissors.svg";
 import logo from "../assets/logoEstetica.png";
-import cartIcon from "../assets/cart-icon.svg";
 
 import { heroTitle, heroSubtitle } from "../data";
 
@@ -36,9 +35,14 @@ const Hero = () => {
           <NavLink to="products">Precios</NavLink>
           <NavLink to="reference">Galeria</NavLink>
           <NavLink to="care">Nosotras</NavLink>
+          <NavLink to="schedule">Agendate</NavLink>
         </ul>
 
-        <img src={cartIcon} className="hidden md:block cursor-pointer" alt="" />
+        <img
+          src={mainLogo}
+          className=" w-12 rotate-180"
+          alt=""
+        />
         <HiMenuAlt3
           size={30}
           className="block md:hidden cursor-pointer text-white"
@@ -69,9 +73,10 @@ const Hero = () => {
             <NavLink to="care" mobileMenu>
               Nosotras
             </NavLink>
+            <NavLink to="schedule" mobileMenu>
+              Agendate
+            </NavLink>
           </ul>
-
-          <img src={cartIcon} className="mt-8 mx-auto cursor-pointer" alt="" />
         </div>
       </div>
 
