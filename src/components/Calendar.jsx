@@ -19,7 +19,7 @@ export default function Calendar() {
           <h1 className="select-none font-semibold">
             {months[today.month()]}, {today.year()}
           </h1>
-          <div className="flex gap-10 items-center ">
+          <div className="flex gap-10 items-center">
             <GrFormPrevious
               className="w-5 h-5 cursor-pointer hover:scale-105 transition-all"
               onClick={() => {
@@ -85,7 +85,7 @@ export default function Calendar() {
           )}
         </div>
       </div>
-      <div className="pl-5 flex flex-col justify-center items-center">
+      <div className="p-2 text-center xs:pl-5 flex flex-col justify-center items-center">
         <h1 className=" font-semibold">
           Agenda para el{" "}
           {selectDate.toDate().toLocaleDateString("es-ES", options)}

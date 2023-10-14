@@ -26,7 +26,7 @@ const Hero = () => {
       setCurrentImage((prevImage) => (prevImage + 1) % carouselImages.length);
     }, 5000);
     return () => clearInterval(interval);
-  }, []);
+  }, [carouselImages.length]);
 
   return (
     <div

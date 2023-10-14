@@ -9,7 +9,7 @@ const Selector = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="w-72 font-medium h-80">
+    <div className="w-52 xs:w-72 xs:h-80 font-medium">
       <div
         onClick={() => setOpen(!open)}
         className={`bg-white border w-full p-2 flex items-center justify-between rounded ${
