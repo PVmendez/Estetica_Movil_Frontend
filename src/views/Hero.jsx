@@ -32,7 +32,7 @@ const Hero = () => {
     <div
       className="h-screen relative flex flex-col items-center"
       style={{
-        background: `url(${carouselImages[currentImage]})`,
+        backgroundImage: `url(${carouselImages[currentImage]})`,
         backgroundPosition: "bottom",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
@@ -51,11 +51,7 @@ const Hero = () => {
           <NavLink to="schedule">Agendate</NavLink>
         </ul>
 
-        <img
-          src={mainLogo}
-          className=" w-12 rotate-180"
-          alt=""
-        />
+        <img src={mainLogo} className=" w-12 rotate-180 md:block hidden" alt="" />
         <HiMenuAlt3
           size={30}
           className="block md:hidden cursor-pointer text-white"
