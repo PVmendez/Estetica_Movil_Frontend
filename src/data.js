@@ -131,4 +131,9 @@ export const productsServices = [
   { name: "Maquillaje social", price: 1200.0 },
 ];
 
-export const options = { weekday: "long", year: "numeric", month: "long", day: "numeric" };
+export const options = {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};

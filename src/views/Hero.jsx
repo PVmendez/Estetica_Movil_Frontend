@@ -1,6 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import masage from "../assets/masage1.jpg";
+import hairStyler from "../assets/haircut.jpg";
+import makeup from "../assets/makeup.jpg";
+import nails from "../assets/nails.jpg";
 import mainLogo from "../assets/scissors.svg";
 import logo from "../assets/logoEstetica.png";
 
@@ -14,12 +17,22 @@ import { AiOutlineClose } from "react-icons/ai";
 
 const Hero = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
+  const [currentImage, setCurrentImage] = useState(0);
+
+  const carouselImages = [masage, hairStyler, makeup, nails];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prevImage) => (prevImage + 1) % carouselImages.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div
       className="h-screen relative flex flex-col items-center"
       style={{
-        background: `url(${masage})`,
+        background: `url(${carouselImages[currentImage]})`,
         backgroundPosition: "bottom",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",

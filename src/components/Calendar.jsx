@@ -14,7 +14,7 @@ export default function Calendar() {
 
   return (
     <div className="sm:py-5 sm:pl-5 flex border gap-10 sm:divide-x justify-center mx-auto my-12 items-center sm:flex-row flex-col">
-      <div>
+      <div className="p-4">
         <div className="flex justify-between items-center">
           <h1 className="select-none font-semibold">
             {months[today.month()]}, {today.year()}
@@ -85,12 +85,12 @@ export default function Calendar() {
           )}
         </div>
       </div>
-      <div className="xs:pl-5 xs:flex xs:flex-col xs:justify-center xs:items-center">
+      <div className="pl-5 flex flex-col justify-center items-center">
         <h1 className=" font-semibold">
           Agenda para el{" "}
           {selectDate.toDate().toLocaleDateString("es-ES", options)}
         </h1>
-        <p className="text-gray-400">Hay disponibilidad</p>
+        <p className="text-gray-400 mb-2">Hay disponibilidad</p>
         <Selector />
       </div>
     </div>

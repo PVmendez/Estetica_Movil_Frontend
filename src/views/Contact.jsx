@@ -29,14 +29,14 @@ export default function ContactForm() {
     });
 
     if (response.ok) {
-      console.log("Message sent successfully");
+      alert("Agenda enviada");
       setLoading(false);
       event.target.name.value = "";
       event.target.email.value = "";
       event.target.message.value = "";
     }
     if (!response.ok) {
-      console.log("Error sending message");
+      alert("Error agendando, intente mas tarde");
       setLoading(false);
     }
   }
